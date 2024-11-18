@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WetterApp</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Hintergrund für die gesamte Seite */
+        body {
+            background-image: url('hintergrundbild.jpg'); /* Bilddatei für den Seitenhintergrund */
+            background-size: cover;
+            background-attachment: fixed;
+            color: white; /* Textfarbe für Lesbarkeit */
+        }
+
+        /* Wetterdaten-Box */
+        #weather-output {
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            color: white;
+            max-width: 500px;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        /* Suchleiste innerhalb der Wetterdaten-Box */
+        #city-input {
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            padding: 8px;
+            width: 70%;
+            margin-right: 5px;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        #search-button {
+            background-color: #555; /* Neutraleres Grau */
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #search-button:hover {
+            background-color: #444; /* Leichte Hervorhebung beim Hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">WetterApp</h1>
+        
+        <!-- Wetterdaten Box mit Suchleiste -->
+        <div id="weather-output">
+            <!-- Suchleiste innerhalb der Box -->
+            <div class="input-group mb-4 justify-content-center">
+                <input type="text" id="city-input" placeholder="Stadt eingeben">
+                <button id="search-button" onclick="fetchWeather()">Suchen</button>
+            </div>
+            
+            <!-- Beispielinhalt für Wetterdaten -->
+            <h3>Wetter in der Stadt</h3>
+            <p>Temperatur: 25°C</p>
+            <p>Wind: 15 km/h</p>
+            <p>Luftfeuchtigkeit: 60%</p>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
+
+
